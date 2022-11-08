@@ -32,6 +32,7 @@
                   <th>Name</th>
                   <th>Description</th>
                   <th class="text-center" style="width: 30px">Add Comment</th>
+                  <th>Comments</th>
                 </tr>
               </thead>
 
@@ -62,6 +63,9 @@
 
 
 
+                        </td>
+                        <td>
+                            <a href="{{url('dashboard/comments/'.$post->id)}}"><i class="fa fa-eye">View Comments</i></a>
                         </td>
 
                   </tr>

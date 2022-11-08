@@ -36,7 +36,7 @@ public function create_post(){
 
             return redirect()->back()->withErrors($validator)->withInput();
         }
-       
+
         $file_name = $request->image->hashName();
 
         $path = 'images';
@@ -62,6 +62,10 @@ public function create_post(){
 
         ]);
         return redirect('dashboard/index');
+    }
+    public function comments($id){
+        $comments = Comment::where('post_id', $id)->get();
+        return view('blog::comments',compact('comments'));
     }
 
 }

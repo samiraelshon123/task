@@ -22,5 +22,6 @@ Route::group(['prefix' => '','middleware' => ['auth']], function() {
         Route::get('create_post', [BlogController::class, 'create_post']);
         Route::post('store_post', [BlogController::class, 'store_post']);
         Route::post('comment/{id}', [BlogController::class, 'comment']);
+        Route::get('comments/{id}', [BlogController::class, 'comments']);
     });
 });
