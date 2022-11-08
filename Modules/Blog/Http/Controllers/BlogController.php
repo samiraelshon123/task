@@ -63,8 +63,9 @@ public function create_post(){
         ]);
         return redirect('dashboard/index');
     }
-    public function comments($id){
-        $comments = Comment::where('post_id', $id)->get();
+    public function comments(Post $post){
+        
+        $comments = $post->comments;
         return view('blog::comments',compact('comments'));
     }
 
