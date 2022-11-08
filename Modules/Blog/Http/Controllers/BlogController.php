@@ -25,8 +25,7 @@ public function create_post(){
     return view('blog::create');
 }
     public function store_post(Request $request){
-
-        $validator = Validator::make($request->all(), [
+      $validator = Validator::make($request->all(), [
             'title' => 'required',
             'descreption' => 'required|min:20',
             'status' => 'required',
@@ -37,8 +36,9 @@ public function create_post(){
 
             return redirect()->back()->withErrors($validator)->withInput();
         }
-       // $file_extention = $request->image ->getClientOriginalExtension();
-        $file_name = $request->title.'.'.'jpg';
+       
+        $file_name = $request->image->hashName();
+
         $path = 'images';
         $request->image->move($path, $file_name);
 

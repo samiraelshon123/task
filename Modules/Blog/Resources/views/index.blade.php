@@ -39,7 +39,7 @@
                 @forelse ($posts as $post)
                     <tr>
                         <td>
-                            <img src="{{asset('images/'.$post->title.'.jpg')}}" width="100px" height="100px">
+                            <img src="{{asset('images/'.$post->image)}}" width="100px" height="100px">
                         </td>
 
                         <td>
