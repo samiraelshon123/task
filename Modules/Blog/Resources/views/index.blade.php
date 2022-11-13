@@ -53,7 +53,7 @@
                         <td>
                             <form action="{{url('dashboard/comment/'.$post->id)}}" method="post">
                                 @csrf
-                                <textarea name="comment" id="" cols="30" rows="5"></textarea>
+                                <textarea name="comment" id="" cols="30" rows="5" required></textarea>
                                 <span class="icon-text-white-50">
 
                                     <button type="submit">  <i class="fa fa-plus"> <span class="text">Comment</span></i></button>

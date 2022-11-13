@@ -53,6 +53,7 @@ public function create_post(){
 
     }
     public function comment(Request $request, $id){
+       
 
         Comment::create([
             'status' => 1,
@@ -66,7 +67,7 @@ public function create_post(){
     public function comments(Post $post){
 
         $comments = $post->comments;
-      
+
         return view('blog::comments',compact('comments'));
     }
 
