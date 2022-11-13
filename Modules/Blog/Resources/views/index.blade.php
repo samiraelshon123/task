@@ -65,7 +65,7 @@
 
                         </td>
                         <td>
-                            <a href="{{url('dashboard/comments/'.$post)}}"><i class="fa fa-eye">View Comments</i></a>
+                            <a href="{{url('dashboard/comments/'.$post->id)}}"><i class="fa fa-eye">View Comments</i></a>
                         </td>
 
                   </tr>
